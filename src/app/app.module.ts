@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import { HttpClientModule  } from '@angular/common/http'; 
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,15 +22,16 @@ import { TodoComponent } from './todo/todo.component';
     ErrorComponent,
     ListTodosComponent,
     MenuComponent,
+    TodoComponent,
     FooterComponent,
-    LogoutComponent,
-    TodoComponent
+    LogoutComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule, 
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

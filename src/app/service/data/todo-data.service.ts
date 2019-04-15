@@ -7,11 +7,6 @@ import { Todo } from 'src/app/list-todos/list-todos.component';
 })
 export class TodoDataService {
   
-  saveTodo(arg0: string, id: any) {
-    
-  }
-  
-
   constructor(
     private http:HttpClient
   ) { }
@@ -28,7 +23,13 @@ export class TodoDataService {
     return this.http.get<Todo>(`http://localhost:8080/users/${username}/todos/${id}`)
   }
 
-  updateTodo(username: any ,id: any,todo) {
+  updateTodo(username: string ,id: number ,todo: Todo) {
     return this.http.put(`http://localhost:8080/users/${username}/todos/${id}`,todo)
   }
+
+  createTodo(username: string ,id: number,todo :Todo) {
+    return this.http.post(`http://localhost:8080/users/${username}/todos/${id}`,todo)
+  }
+
+  
 }
